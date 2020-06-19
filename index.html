@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap_edit.css">
+        <link rel="stylesheet" href="./assets/fontawesome-free-5.13.0-web/css/all.css">
+        <link rel="stylesheet" href="./assets/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <aside class="sidebar">
+            <section>
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control form-control-sm" id="input-search-account" title="Ctrl+Shift+F" placeholder="Search list">
+                    <div class="input-group-append">
+                        <button class="btn btn-sm btn-light btn-light-bordered" onclick="searchAccount()"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="list-group mt-3" id="account-list">
+                </div>
+            </section>
+        </aside>
+        <div class="nav-bar nav-bar-dark">
+            <div class="nav-bar-menu">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <button class="btn btn-sm btn-orange ml-2 mr-sm-1" onclick="modalAddAccount()" title="CTRL+D"><i class="fa fa-plus"></i> Add account</button>
+                        <button class="btn btn-sm btn-dark mr-sm-1" title="Manage account (CTRL+Q)" onclick="loadAccountDialog()"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-sm btn-dark mr-sm-1" title="Me (CTRL+T)" onclick="userInfoDialog()"><i class="fa fa-user"></i></button>
+                        <input type="hidden" id="username">
+                        <input type="hidden" id="userid">
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <div class="float-right">
+                            <div class="form-inline">
+                                <div class="input-group input-group-sm mb-2 mr-sm-2">
+                                    <input type="text" class="form-control form-control-sm input-bg-dark" title="Ctrl+F" id="input-search-all" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-sm btn-dark" onclick="searchAll()"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-dark mb-2 mr-sm-2" title="sign out (CTRL+SHIFT+E)" onclick="logOut()"><i class="fa fa-sign-out"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>                     
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="content-header">
+                <h6 id="header">
+                    <span id="table-head"></span>
+                    <button class="btn btn-sm btn-secondary float-right" id="btn-open-web" title="Load website" onclick="loadWebsite()"><i class="fa fa-globe"></i></button>
+                    <input type="hidden" id="account-id">
+                    <input type="hidden" id="account-url">
+                    <button class="btn btn-sm btn-secondary float-right mr-1" id="btn-add-row" title="Add rows" onclick="addRow()"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-sm btn-secondary float-right mr-1" id="btn-add-record" title="Add rows" onclick="addRecord()"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-sm btn-secondary float-right mr-1" id="btn-save" title="Save records (CTRL+S)" onclick="submitRecord()"><i class="fa fa-save"></i></button>
+                </h6>
+            </div>
+            <div class="content">
+                <div id="alert"></div>
+                <div class="table-responsive" id="account-detail">
+                    <table class="table table-sm table-bordered">
+                        <tbody id="account-info">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery/jquery-1.9.0.min.js" integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344=" crossorigin="anonymous"></script>
+        <script src="./assets/js/bootstrap/popper.min.js"></script>
+        <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

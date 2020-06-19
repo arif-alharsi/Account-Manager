@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap_edit.css">
+        <link rel="stylesheet" href="./assets/fontawesome-free-5.13.0-web/css/all.css">
+        <link rel="stylesheet" href="./assets/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-xl-12">
+                    <div class="form-group">
+                        <label for="account-name">Account name</label>
+                        <input type="text" name="account-name" id="account-name" class="form-control form-control-sm" placeholder="example: Bazcoon, Facebook, etc" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="account-url">URL</label>
+                        <input type="text" name="account-url" id="account-url" class="form-control form-control-sm" placeholder="example: https://bazcoon.com">
+                    </div>
+                    <button class="btn btn-sm btn-primary float-right" onclick="submitAccount()"><i class="fa fa-paper-plane"></i> Submit</button>
+                    <button class="btn btn-sm btn-secondary mr-2 float-right" onclick="closeModal()"><i class="fa fa-times"></i> Close</button>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery/jquery-1.9.0.min.js" integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344=" crossorigin="anonymous"></script>
+        <script src="./assets/js/bootstrap/popper.min.js"></script>
+        <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="./modal-add-account.js">
+        </script>
+    </body>
+</html>

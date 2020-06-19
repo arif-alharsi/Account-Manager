@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap_edit.css">
+        <link rel="stylesheet" href="./assets/fontawesome-free-5.13.0-web/css/all.css">
+        <link rel="stylesheet" href="./assets/css/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <div class="nav-bar nav-bar-light">
+            <div class="nav-bar-menu">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <button class="btn btn-sm btn-light btn-light-bordered ml-sm-2" title="Save (CTRL+S)" onclick="saveChanges()"><i class="fa fa-save"></i></button>
+                        <button class="btn btn-sm btn-light btn-light-bordered" title="Delete (CTRL+E)" onclick="deleteSelectedRow()"><i class="fa fa-trash"></i></button>
+                        <button class="btn btn-sm btn-light btn-light-bordered" title="Check all" onclick="checkAll()"><i class="fa fa-check"></i></button>
+                        <button class="btn btn-sm btn-light btn-light-bordered" title="Uncheck all" onclick="uncheckAll()"><i class="fa fa-times"></i></button>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                        <div class="float-right">
+                            <div class="form-inline">
+                                <div class="input-group input-group-sm mb-2 mr-sm-2">
+                                    <input type="text" class="form-control form-control-sm" id="input-search" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-sm btn-light btn-light-bordered" onclick="loadTbodyAccount(true)"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                     
+            </div>
+        </div>
+        <div class="row mr-1 ml-1" style="margin-top:20px">
+            <div class="col-xl-12">
+                <div id="alert"></div>
+                <input type="hidden" id="res-length">
+                <div class="table-responsive" id="account-table">
+                    <table class="table table-sm table-bordered">
+                        <tbody id="tbody-account">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery/jquery-1.9.0.min.js" integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344=" crossorigin="anonymous"></script>
+        <script src="./assets/js/bootstrap/popper.min.js"></script>
+        <script src="./assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="./modal-manage-account.js"></script>
+    </body>
+</html>
